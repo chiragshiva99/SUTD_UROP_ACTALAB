@@ -1,0 +1,2 @@
+# UROP_SUTD_ACTALAB
+Development of a Database for Chalcogenide Material Properties. The purpose of the website was for the SUTD ACTAlab research students to store their data files which can also be accessible to the public. The Project Includes the following; 1. A website framework using Django 2. Languages- Python, HTML, CSS, JavaScript 3. A flexible and scalable database structure using My SQL 4. A hosting system on Google Cloud App Engine
