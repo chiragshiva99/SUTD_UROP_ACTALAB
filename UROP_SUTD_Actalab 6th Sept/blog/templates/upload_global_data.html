@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<!---tells the browser about the type of the document.-->
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!---^^link to bootstrap stylesheet-->
+
+      <title>ACTALAB Datasite</title>
+  </head>
+
+  <body>
+    {% include 'navbar.html' %}
+
+    <!----------------------------------------------------------------------------------------------------->     
+    <!--To use bootstrap grid, add create a container, add row, add col
+      label classes with container / row / col-->
+    <div class = "home_body_div container">
+      <div class="row bg-light pl-5 pt-3 mb-3 mt-3">
+        <h5 class="text-secondary"> Upload data extracted from globally published resources.</h5>
+          <br>
+          <br>
+        <form method ="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <div class="row">
+            <label> Upload Data: </label>
+              <div class="form-group">   
+                <input type="file" class="form-control-file" name = "UploadGlobalFile">
+                <p> *Must be JSON file - an array of dictionaries with Keys: "material", "property", "propertyVal", "sentence", "year", "DOI"  . </p>
+              </div>
+            </div>
+            <div class="row pt-3"> <!--pt-3 gives spacing at the top padding top - 3 units-->
+              <button type = "submit" class="btn btn-primary" name="submit_button" value="upload_file"> Submit </button>
+            </div>
+          </div>
+        </form>
+      </div>
+        
+      <div class="row bg-light pl-3 pt-3"> <!-- p stands for padding, m stands for margin-->
+        <h5 class="text-secondary">Search within extracted data</h5>
+      </div>
+
+      <div class="row bg-light pl-3">
+        <form method ="POST" enctype="multipart/form-data"> 
+          <div class="row">
+            <div class = "col-md-auto mb-3">
+              <!---display all available properties -->
+                <!--dropdownlist-->
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Select Property</label>
+                  <select class="form-control" id="dropDownSelect" name ="selectedProperty">
+                  </select>
+                </div>
+            </div>
+            <div class = "col-md-auto"> <p> Search for values between </p></div>
+            <div class="col"> <input type="text" class="form-control" name = "firstValue" > </div>
+            <div class = "col-md-auto"> <p> and </p></div>
+            <div class="col"> <input type="text" class="form-control" name = "secondValue"> </div>
+
+            <div class = "col">
+              <button type = "submit" class="btn btn-primary" name="submit_button" value="search_data"> Search </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="row mt-3">
+        <h5>Search Results</h5>
+      </div>
+
+        <!--searching option to filter the table display-->
+      <div class = "row bg-light">
+          <p class="text-danger" id="warningText"></p>
+          <div class="input-group mb-3">
+          <input id='myInput' onkeyup='searchTable()' type='text' class="form-control" placeholder="Filter" aria-label="Username" width="50%" >
+          </div>
+      </div>
+        <!-------------------------------------------------->
+
+      <div class="row">
+          
+            <div class="data_list_class" style="width: 100%;">
+                <table class = "table table-active table-bordered table-hover-responsive-xl" width="100%" id="myTable" >
+                <thead class="thead-dark">
+                    <tr id='tableHeader'>
+                    <th onclick="sortTable(0)" class="h5"> Material <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    <th onclick="sortTable(1)" class="h5"> Property <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    <th onclick="sortTable(2)" class="h5"> Property Value <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    <th onclick="sortTable(3)" class="h5"> Year <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    <th onclick="sortTable(4)" class="h5"> DOI <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!---Table goes here-->
+                </tbody>
+                </table>
+            </div>
+      </div>
+
+    </div>
+  </body>
+</html>

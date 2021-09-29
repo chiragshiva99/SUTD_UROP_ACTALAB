@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<!---tells the browser about the type of the document.-->
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!---^^link to bootstrap stylesheet-->
+
+      <title>ACTALAB Datasite</title>
+  </head>
+
+  <body>
+    {% include 'navbar.html' %}
+
+    <!------------------------------------------------------------>     
+    <!--To use bootstrap grid, add create a container, add row, add col label classes with container / row / col-->
+    <div class = "home_body_div container">
+      
+      
+      <p> {{ipAddressDict}} </p>
+
+      <div class ="row pt-3">
+        <button type="button" class="btn btn-outline-info btn-lg btn-block">
+          <a href="{% url 'blog:materials-list' %}" style="color: inherit;"> View All Recorded Materials </a>
+          <!--use inherit to inherit the color of font from parent, istead of default href font-->
+        </button>
+      </div>
+
+      <div class="row pt-3">
+          <!--specify url fragment where hyperlink links to-->
+          <button type="button" class="btn btn-outline-info btn-lg btn-block">
+            <a href="{% url 'blog:show-data-collection' %}" style="color: inherit;"> Instrument Datatype Files (Collected in Lab) </a>
+          </button>
+      </div>
+
+      <div class ="row pt-3">
+        <button type="button" class="btn btn-outline-info btn-lg btn-block">
+          <a href="{% url 'blog:aja-log' %}" style="color: inherit;"> AJA Log </a>
+          <!--use inherit to inherit the color of font from parent, istead of default href font-->
+        </button>
+      </div>
+
+      <div class ="row pt-3">
+        <button type="button" class="btn btn-outline-info btn-lg btn-block">
+          <a href="{% url 'blog:txt-table' %}" style="color: inherit;"> Auto-Add New Material Property </a>
+          <!--use inherit to inherit the color of font from parent, istead of default href font-->
+        </button>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
