@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Material List</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+
+    <div class="description_class">
+      <h2 id="description"> Select the required materials to view our recorded properties.</h2>
+    </div>
+    <!----------------------------------------------------------------------------------------------------->     
+    <!--To use bootstrap grid, add create a container, add row, add col
+      label classes with container / row / col-->
+    <div class = "home_body_div container">
+        
+        <div class="table_heading">
+          <p id="description" >Materials</p>
+        <style>
+        #descption{
+          color:blue;
+        }
+        </style>
+        </div>
+
+    <table 
+    id="table"
+    data-toggle="table"
+    data-filter-control="true"
+    data-show-search-clear-button="true"
+    >
+                      <thead class="thead-dark">
+                    <tr id='tableHeader'>
+                    <th  data-field="material" class="h5" data-sortable="true" data-filter-control="input" > Material <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    <th  data-field="source-of-data" class="h5" data-sortable="true" data-filter-control="input">  Source of Data <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    <th  data-field="data-added" class="h5" data-sortable="true" data-filter-control="select">  Date Added <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    </tr>
+                </thead>
+      <tbody>
+                <!---Table goes here-->
+                {% for i in material_list %}
+
+                <tr>
+                  <td>{{i.material}}</td>
+                  <td>{{i.source_of_data}}</td>
+                  <td>{{i.date_added}}</td>
+                  
+                </tr>
+                  {% endfor %}
+                </tbody>
+    </table>
+    <script>
+  $(function() {
+    $('#table').bootstrapTable()
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+  </body>
+</html>

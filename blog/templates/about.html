@@ -1,0 +1,275 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <!---tells the browser about the type of the document.-->
+  <html>
+    <head>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <meta charset="utf-8" />
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+      />
+      <!---^^link to bootstrap stylesheet-->
+
+      <title>About ACTALAB Datasite</title>
+    </head>
+
+    <body>
+      {% include 'navbar.html' %}
+
+      <!-- Header -->
+
+      <!-- <header class="bg-info py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">ACTALab Database Repository</h1>
+          <p class="lead mb-5 text-white-50">A step towards capitalising on Big Data. A collection of composition and material properties, recorded by our lab researchers, for building shared knowledge.  </p>
+        </div>
+      </div>
+    </div>
+  </header> -->
+      <!-- Image and text -->
+      <nav class="navbar navbar-light bg-light">
+        <br />
+      </nav>
+
+      <!-- Page Content -->
+      <div class="container">
+        <!--What is it + contact info-->
+        <div class="row justify-content-center">
+          <div class="col-md-8 mb-3" style="text-align: center">
+            <h2 class="text-info">About ChalcoSite.Online</h2>
+            <hr />
+            <p>
+              As the name suggests, ChalcoSite.online is a data collection of
+              Chalcogenide materials' properties. The site is run by
+              ActaLab@SUTD and the data that is publicly available has been
+              collected by researchers from the ActaLab group during their
+              investigative processes.
+            </p>
+            <p>
+              Our aim is develop a robust and sustainable digital database of
+              the properties that a vast array of Chalcogneide materials
+              possess. Eventually, we hope to run machine learning programs on
+              the large database to accurately predict new material properties
+              and build a system of Artifical Intelligence that brings more
+              efficiency and innovation into the research process of Material
+              Scientists.
+            </p>
+            <!-- <a class="btn btn- btn-lg" href="/list-materials">Check It Out &raquo;</a> -->
+          </div>
+        </div>
+        <!-- /.row -->
+        <!----------------------------------------------------------------->
+        <nav class="navbar navbar-light bg-light mb-3 justify-content-center">
+          <br />
+        </nav>
+        <h3 class="text-muted" style="text-align: center">
+          [ Material Science + Digitisation ]
+        </h3>
+        <h4 class="text-muted" style="text-align: center">
+          The Digital Aspects that Drive AI-based Research
+        </h4>
+        <hr />
+
+        <div class="container">
+          <!---Features----------------------------->
+          <div class="row">
+            <!---Feature 1: Collective Knowledge -->
+            <div class="columns">
+              <p class="thumbnail_align">
+                
+                <img src="{% static 'images/Feature-1.png' %}"  class="thumbnail" />
+              </p>
+              <h4>COLLECTIVE KNOWLEDGE</h4>
+              <p>
+                Developing an impressive, comprehensive digital collection of
+                knowledge so that any relevant information is never lost, only
+                stored and shared.
+              </p>
+            </div>
+            <!---Feature 2: IoT---->
+            <div class="columns">
+              <p class="thumbnail_align">
+                <img src="{% static 'images/Feature-2.png' %}" alt="" class="thumbnail" />
+              </p>
+              <h4>INTERNET OF THINGS</h4>
+              <p>
+                Automation of data uploading through a wireless data flow
+                network. Files from instruments are automatically transferred
+                into an external server, where they are processed for data
+                values to be entered automatically into the database.
+              </p>
+            </div>
+            <!---Feature 3: Big Data-->
+            <div class="columns">
+              <p class="thumbnail_align">
+                <img src="{% static 'images/Feature-3.png' %}" alt="" class="thumbnail" />
+              </p>
+              <h4>BIG DATA ANALYTICS</h4>
+              <p>
+                Creating a structured database to hold the large volumes of
+                seemingly unconncected data points for better scalability & more
+                efficient queries. The organisation also aids data analytics to
+                reveal patterns and connections between the materials and their
+                properties.
+              </p>
+            </div>
+            <!---Feature 4: Data Analysis-->
+            <div class="columns">
+              <p class="thumbnail_align">
+                <img src="{% static 'images/Feature-4.png' %}" alt="" class="thumbnail" />
+              </p>
+              <h4>MACHINE LEARNING & AI</h4>
+              <p>
+                Developing an impressive, comprehensive collection of knowledge
+                so that any relevant information is never lost, only stored and
+                shared.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!----------------------------------------->
+        <!---end cards with sutsd, acta and sutd-mit logos-->
+
+        <nav class="navbar navbar-light bg-light">
+          <br />
+        </nav>
+
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <div class="card h-100">
+              <img class="card-img-top" src="{% static 'images/sutd-logo-300x180.jpg' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="card h-100">
+              <img class="card-img-top" src="{% static 'images/actalab-logo-II.jpg' %}" alt="" />
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="card h-100">
+              <img class="card-img-top" src="{% static 'images/sutd-mit.jpg' %}" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- /.row -->
+        <!--------------------------->
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <h2>Contact Us</h2>
+            <hr />
+            <address>
+              <strong>SUTD, Singapore</strong>
+              <br />3481 Melrose Place <br />Beverly Hills, CA 90210
+              <br />
+            </address>
+            <address>
+              <abbr title="Phone">P:</abbr>
+              (123) 456-7890
+              <br />
+              <abbr title="Email">E:</abbr>
+              <a href="mailto:#">name@example.com</a>
+            </address>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+
+      <!-- Footer -->
+      <footer class="py-5 bg-dark">
+        <div class="container">
+          <p class="m-0 text-center text-white">
+            Copyright &copy; ACTALab 2020
+          </p>
+        </div>
+        <!-- /.container -->
+      </footer>
+
+      <style>
+        .columns {
+          width: 25%;
+          float: left;
+          color: #212529;
+          line-height: 24px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          text-align: justify;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+        .row .columns p {
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+        .container .columns h4 {
+          text-align: center;
+          color: #01b2d1;
+        }
+
+        .thumbnail {
+          width: 100px;
+          border-radius: 200px;
+          height: 100px;
+          margin-left: auto;
+        }
+        .thumbnail_align {
+          text-align: center;
+        }
+        h4 {
+          font-size: 20px;
+        }
+      </style>
+    </body>
+    <script>
+    var private_use_menu = document.getElementById("private_menu");
+
+console.log("hello");
+console.log("ipAddressDict: ", ipAddressDict) ;
+console.log(typeof(ipAddressDict) );
+//ipAddressDict = {"ip_value": ip_address}
+
+ipAddressValues = Object.values(ipAddressDict); //makes an array of all values 
+ipAddress = ipAddressValues[0];
+
+var fourNumberIpArray = [ipAddress[0], ipAddress[1], ipAddress[2], ipAddress[4], ipAddress[5], ipAddress[7], ipAddress[8]];
+
+var desiredIpArray = ["1", "0", "3", "2", "4", "7", "7"]
+var counter = 0;
+
+for (i = 0; i < fourNumberIpArray.length; i++)
+{
+  if (fourNumberIpArray[i] == desiredIpArray[i])
+  {counter += 1}
+}
+if (counter == 7)    
+{    
+    //show Private user if IP is in 10.12... range 
+    console.log("within")
+    private_use_menu.style.display = "none";
+} 
+else 
+{
+    console.log("not within")
+    //hide Private user if IP is not in 10.12... range 
+    private_use_menu.style.display = "block"; //none means element will have none display area
+}
+</script>
+    <!--add to ensure bootstrap works--->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    <!---------------------------------->
+  </html>
+</html>
