@@ -15,9 +15,9 @@ class Customer(models.Model):
 
 
 Instrument_Choices = (
-    ('Linkam- Optical spectra vs Temperature', 'Linkam- Optical spectra vs Temperature'),
-    ('Linkam- Reflectance vs Temperature', 'Linkam- Reflectance vs Temperature'),
-    ('Linkam- Video of crystallisation (formed by composing images)', 'Linkam- Video of crystallisation (formed by composing images)'),
+    ('Linkam - Optical spectra vs Temperature', 'Linkam- Optical spectra vs Temperature'),
+    ('Linkam - Reflectance vs Temperature', 'Linkam- Reflectance vs Temperature'),
+    ('Linkam - Video of crystallisation (formed by composing images)', 'Linkam - Video of crystallisation (formed by composing images)'),
     ('Vector Network Analyser (VNA)- Permittivity', 'Vector Network Analyser (VNA)- Permittivity'),
     ('Vector Network Analyser (VNA)- Permeability', 'Vector Network Analyser (VNA)- Permeability'),
     ('Four Point Probe- Resistivity', 'Four Point Probe- Resistivity'),
