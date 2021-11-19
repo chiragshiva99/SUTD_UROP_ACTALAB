@@ -77,9 +77,6 @@ class CustomerRegistrationView(CreateView):
 
         return super().form_valid(form)
 
-class CustomerLogOutView(View):
-    template_name = "home.html"
-
 
 class AjaLogView(TemplateView):
     template_name = "aja_log.html"
