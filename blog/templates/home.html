@@ -25,7 +25,7 @@
 
       <div class ="row pt-3">
         <button type="button" class="btn btn-outline-info btn-lg btn-block">
-          <a href="{% url 'blog:materials-list' %}" style="color: inherit;"> View All Recorded Materials </a>
+          <a href="{% url 'blog:materials-list' %}" style="color: inherit;"> View All New Materials Discovered </a>
           <!--use inherit to inherit the color of font from parent, istead of default href font-->
         </button>
       </div>
@@ -33,7 +33,7 @@
       <div class="row pt-3">
           <!--specify url fragment where hyperlink links to-->
           <button type="button" class="btn btn-outline-info btn-lg btn-block">
-            <a href="{% url 'blog:show-data-collection' %}" style="color: inherit;"> Instrument Datatype Files (Collected in Lab) </a>
+            <a href="{% url 'blog:show-data-collection' %}" style="color: inherit;"> Instrument All Instrument Data </a>
           </button>
       </div>
 
@@ -44,12 +44,12 @@
         </button>
       </div>
 
-      <div class ="row pt-3">
+      <!-- <div class ="row pt-3">
         <button type="button" class="btn btn-outline-info btn-lg btn-block">
           <a href="{% url 'blog:txt-table' %}" style="color: inherit;"> Auto-Add New Material Property </a>
-          <!--use inherit to inherit the color of font from parent, istead of default href font-->
+          use inherit to inherit the color of font from parent, istead of default href font
         </button>
-      </div>
+      </div> -->
 
     </div>
 
