@@ -33,7 +33,7 @@
             <a class="nav-link" href="{% url 'blog:upload-global-data' %}">GLOBAL DATA <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'blog:about' %}">ABOUT <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'blog:about' %}"> ABOUT <span class="sr-only">(current)</span></a>
           </li>
 
 
@@ -43,9 +43,9 @@
             data-bs-toggle="dropdown" href="" id="navbarDropdown" role="button">UPLOAD DATA FORMS</a>
 
             <div aria-labelledby="navbarDropdown" class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'blog:data-collection' %}"> Instruments-Datatype Files </a>
-              <a class="dropdown-item" href="{% url 'blog:material-list-upload' %}"> Add New Recorded Material </a>
-              <a class="dropdown-item" href="{% url 'blog:txt-file-upload' %}"> Add New Material Properity (txt files) </a>
+              <a class="dropdown-item" href="{% url 'blog:data-collection' %}"> ADD SELF-COLLECTED INSTRUMENT DATA </a>
+              <a class="dropdown-item" href="{% url 'blog:material-list-upload' %}"> RECORD A NEW MATERIAL </a>
+              <!-- <a class="dropdown-item" href="{% url 'blog:txt-file-upload' %}"> Add New Material Properity (txt files) </a> -->
             </div>
           </li>
           {% endif %}
