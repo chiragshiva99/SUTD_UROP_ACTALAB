@@ -29,26 +29,35 @@
         } 
         </style> 
         </div> 
-<!-- 
+<!-- filter search bar -->
+        <script>
+          $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          </script>
+
     <table 
     id="table"
     data-toggle="table"
     data-filter-control="true"
-    data-show-search-clear-button="true"
     >
-                <thead class="thead-dark"> 
+                <thead class="thead-light"> 
                     <tr id='tableHeader'>
-                    <th  data-field="Instruments - Datatype" class="h5" data-sortable="true" data-filter-control="select" > Instruments - Datatype <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
-                    <th  data-field="Operator" class="h5" data-sortable="true" data-filter-control="input">  Operator <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
-                    <th  data-field="Sample ID" class="h5" data-sortable="true" data-filter-control="input">  Sample ID <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
-                    <th  data-field="Composition" class="h5" data-sortable="true" data-filter-control="input">  Composition <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
-                    <th  data-field="Comments" class="h5" data-sortable="true" data-filter-control="input">  Comments <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
-                    <th  data-field="data-added" class="h5" data-sortable="true" data-filter-control="input" >  File <button id="sort_arrows" style=" border:none; float: right;"> <span> &#8645;</span> </button> </th>
+                    <th  data-field="Instruments - Datatype" class="h5" data-sortable="true" > Instruments - Datatype </th>
+                    <th  data-field="Operator" class="h5" data-sortable="true" > Operator </th>
+                    <th  data-field="Sample ID" class="h5" data-sortable="true" > Sample ID </th>
+                    <th  data-field="Composition" class="h5" data-sortable="true" > Composition </th>
+                    <th  data-field="Comments" class="h5" data-sortable="true" > Comments </th>
+                    <th  data-field="File" class="h5" data-sortable="true" > File </th>
                     </tr>
 
                 </thead> 
       <tbody>
-           Table goes here
                 {% for p in instru_list%}
 
                 <tr>
@@ -61,9 +70,9 @@
                 </tr>
                   {% endfor %}
                 </tbody>
-    </table> -->
-
-    <table class="table table-hover">
+    </table> 
+<!-- 
+    <table class="table table-hover" id="center">
       <thead class="table-active">
         <tr>
           <th scope="col"> Instruments - Datatype </th>
@@ -87,19 +96,10 @@
         </tr>
           {% endfor %}
       </tbody>
-    </table>
+    </table> -->
+ 
 
-
-
-
-
-<!-- 
-    <script>
-  $(function() {
-    $('#table').bootstrapTable()
-  })
-</script> -->
-
+</script> 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
