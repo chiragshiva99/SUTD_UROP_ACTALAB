@@ -6,6 +6,7 @@ from .models import *
 from .forms import CustomerRegistrationForm, CustomerLoginForm, DataCollectionForm, TxtFileForm, MaterialListForm
 from django.urls import reverse_lazy
 from django.contrib.auth import authenticate, login, logout
+# from django.contrib.auth.decorators import login_required
 
 
 
