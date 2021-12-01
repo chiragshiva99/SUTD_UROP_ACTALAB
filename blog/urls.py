@@ -2,13 +2,14 @@ from django.urls import path
 from .views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.decorators import login_required
 
 app_name = "blog"
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
     path("about/", AboutView.as_view(), name="about"),
     path("material_list_upload/",
-         MaterialListUploadView.as_view(),
+         login_required(MaterialListUploadView.as_view()),
          name="material-list-upload"),
     path("materials_list/", MaterialsListView.as_view(),
          name="materials-list"),
@@ -25,7 +26,7 @@ urlpatterns = [
          ViewGlobalDataView.as_view(),
          name="view-global-data"),
     path("details_of_data_collection/",
-         DetailsOfDataCollectionView.as_view(),
+         login_required(DetailsOfDataCollectionView.as_view()),
          name="data-collection"),
     path("show_data_collection/",
          ShowDataCollectionView.as_view(),
