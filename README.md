@@ -2,7 +2,7 @@
 
 ### Contributors 
 - Chirag Shivakumar 
-- Prachi Jayesh Suthar 
+- Suthar Prachi Jayesh 
 
 UROP Requirements- Development of a Database for Chalcogenide Material Properties. The purpose of the website was for the SUTD ACTAlab research students to store their data files which can also be accessible to the public.
 
